@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* background-color: rgb(211, 211, 211); */
+}
+.main-container{
+    /* background-color: rgb(211, 211, 211); */
+    height: fill;
+    width: fill;
+   
+}
+.main-container::after{
+    content: '';
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    box-shadow: 0 0 500px 300px black inset;
+    z-index: -1;
+}
+.head-container{
+    background-color: rgba(0, 0, 0, .5);
+    
+}
+.main-video{
+    position: fixed;
+    opacity: 0.2;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+}
+.logo{
+    width: 4.5rem;
+    height: 4.5rem;
+    padding: 10px;
+}
+.login{
+    height: 2rem;
+    width: 5rem;
+    border-radius: 10%;
+    border: none;
+    box-shadow: 2px 3px #080808;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: rgb(229,9,20);
+    position: relative;
+    left: 81vw;
+    bottom: 2vh;
+}
+.signup{
+    height: 2rem;
+    width: 5rem;
+    border-radius: 10%;
+    border: none;
+    box-shadow: 2px 3px #080808;
+    font-size: 1.1rem;
+    font-weight: 700;
+    /* position: absolute;
+    right: 5vw;
+    top: 3%; */
+    position: relative;
+    left: 82vw;
+    bottom: 2vh;
+}
+.room-container{
+    /* background-color: rgb(211, 211, 211); */
+    height: auto;
+    max-width: auto;
+    margin-top: 5%;
+    display: grid;
+    /* padding: 7vh 7vw 7vh 7vw; */
+    padding-left: 5vw;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 10vh;
+    column-gap: 10vw;
+}
+.room{
+    border: 2px solid black;
+    width: 15rem;
+    background-color: #413F42;
+    border-radius: 10%;
+    
+}
+.room h2{
+    color: #fff;
+    padding-left: 28%;
+    font-family: sans-serif;
+    text-decoration: underline solid orange;
+
+}
+.room p{
+    color: #fff;
+    font-size: 1.1rem;
+    padding: .4em;
+    font-family: sans-serif;
+}
+.join{
+    height: 3vh;
+    width: 5vw;
+    min-width: 80px;
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+    position: relative;
+    border-radius: 10%;
+    left: 0.3vw;
+    color: #150E56;
+    background-color: #FBF2CF;
+    font-family: 'Concert One', cursive;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 1400px) {
+    .room-container { grid-template-columns: repeat(3, 1fr); }
+  }
+  
+@media (max-width: 1000px){
+    .room-container { grid-template-columns: repeat(2, 1fr); }
+}

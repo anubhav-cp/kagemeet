@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <title>Chat System</title>
+</head>
+<body>
+    <div class="main-container">
+        <video autoplay muted loop class="main-video">
+            <source src="{% static 'css/images/luffy.mp4' %}" type="video/mp4">
+        </video>
+        <div class="head-container">
+        <img src="{% static 'css/images/chat-logo.png' %}" alt="" class="logo">
+        <button class="login">Sign in</button>
+        <button class="signup">Sign up</button>
+    </div>
+        <div class="room-container">
+            {% for room in rooms %}
+            <div class="room">
+                <h2>{{room.name}}</h2>
+                <p>Short description as you wished</p>
+                <a href="{% url 'room' room.name %}"><button class="join">Join</button></a>
+            </div>
+            {% endfor %}
+    </div>
+</body>
+</html>
