@@ -17,6 +17,7 @@
         <div class="head-container">
         <img src="{% static 'css/images/chat-logo.png' %}" alt="" class="logo">
         <button class="login">Sign in</button>
+        <p style="color: red;">{{request.user.username}}</p>
         <button class="signup">Sign up</button>
     </div>
         <div class="room-container">
